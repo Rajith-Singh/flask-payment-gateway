@@ -1,0 +1,130 @@
+/* General reset and box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 16px;
+}
+
+.header h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.amount-info {
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+}
+
+.payment-form {
+    margin-top: 30px;
+}
+
+.form-row {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, .card-element {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-top: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #888;
+}
+
+.footer p {
+    margin-top: 15px;
+}
+
+.card-element {
+    height: 40px;
+}
+
+/* Amount Display on Button */
+#amount-display {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 480px) {
+    .container {
+        padding: 25px;
+        max-width: 100%;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .header h2 {
+        font-size: 22px;
+    }
+}

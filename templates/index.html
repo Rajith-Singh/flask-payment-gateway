@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Payment Gateway</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h2>Complete Your Payment</h2>
+            <p class="amount-info">Amount: $<span id="amount-display"></span></p>
+        </div>
+        
+        <!-- Payment Form Section -->
+        <form id="payment-form" class="payment-form">
+            <!-- Card Number Input -->
+            <div class="form-row">
+                <label for="card-element">Card Details</label>
+                <div id="card-element" class="card-element">
+                    <!-- Stripe Element will be inserted here -->
+                </div>
+                <div id="card-errors" role="alert" class="error-message"></div>
+            </div>
+
+            <!-- Cardholder Name Input -->
+            <div class="form-row">
+                <label for="card-holder-name">Cardholder Name</label>
+                <input type="text" id="card-holder-name" placeholder="John Doe" required>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-row">
+                <button id="submit" class="btn-primary" type="submit">Pay $<span id="amount-display"></span></button>
+            </div>
+        </form>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <p>Secure Payment Powered by UOM IT</p>
+        </div>
+    </div>
+
+    <!-- Include Payment Logic -->
+    <script src="{{ url_for('static', filename='payment.js') }}"></script>
+</body>
+
+</html>

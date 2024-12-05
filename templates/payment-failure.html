@@ -1,0 +1,22 @@
+<!-- templates/payment-failure.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Failed</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="payment-container">
+        <div class="payment-card failure-card">
+            <div class="icon-container">
+                <img src="/static/images/failure-icon.svg" alt="Failure Icon" class="icon">
+            </div>
+            <h1>Payment Failed</h1>
+            <p class="failure-message">Your payment could not be processed. Please try again later or contact support.</p>
+            <a href="/" class="btn btn-retry">Retry Payment</a>
+        </div>
+    </div>
+</body>
+</html>
